@@ -1,10 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-import uvicorn
-from fastapi import FastAPI
 
-app = FastAPI()
 
 # Webpage URL
 url = 'https://finance.yahoo.com/crypto/'
