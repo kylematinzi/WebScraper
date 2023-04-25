@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
+import os
 
 
 # Webpage URL
@@ -27,6 +28,9 @@ def main():
         writer.writerow(headers)
         for row in rows:
             writer.writerow(row)
+        current_dir = os.getcwd()
+        csv_file_path = os.path.join(current_dir, 'crypto_info.csv')
+        print("CSV file created here: " + csv_file_path)
 
 
 if __name__ == '__main__':
